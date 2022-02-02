@@ -1,0 +1,43 @@
+{
+  "name": "catpaw/starter",
+  "type": "library",
+  "description": "A php CatPaw library that provides services to interact with a RaspberryPI's GPIO.",
+  "homepage": "https://github.com/tncrazvan/catpaw-raspberrypi",
+  "license": "MIT",
+  "keywords": [
+    "php",
+    "cli",
+    "catpaw",
+    "raspberrypi",
+    "gpio"
+  ],
+  "scripts": {
+    "load": "@composer dump-autoload -o",
+    "script": "@php ./vendor/catpaw/core/scripts/start.php",
+    "start:example:blink": "@script examples/blink.php",
+    "dev:example:blink": "@start dev 100 && @composer run dev"
+  },
+  "authors": [
+    {
+      "name": "Razvan Tanase",
+      "email": "tangent.jotey@gmail.com",
+      "homepage": "https://github.com/tncrazvan",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "CatPaw\\RaspberryPI\\": "src/lib/"
+    }
+  },
+  "require": {
+    "php": "^8.0",
+    "catpaw/core": "^1.0",
+    "amphp/amp": "^2.6",
+    "amphp/file": "^2.0"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "process-timeout": 0
+  }
+}
