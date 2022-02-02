@@ -1,5 +1,5 @@
 {
-  "name": "catpaw/starter",
+  "name": "catpaw/raspberrypi",
   "type": "library",
   "description": "A php CatPaw library that provides services to interact with a RaspberryPI's GPIO.",
   "homepage": "https://github.com/tncrazvan/catpaw-raspberrypi",
