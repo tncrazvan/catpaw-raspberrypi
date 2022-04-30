@@ -5,7 +5,7 @@ namespace {
     use function Amp\delay;
 
     function main(
-        #[GPIO(GPIO::HEADER12,GPIO::WRITE)] $set12
+        #[GPIO(GPIO_HEADER12,GPIO_WRITE)] $set12
     ){
         $led = false;
         while(true){
