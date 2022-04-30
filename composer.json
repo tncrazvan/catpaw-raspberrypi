@@ -14,7 +14,7 @@
   "scripts": {
     "load": "@composer dump-autoload -o",
     "script": "@php ./vendor/catpaw/core/scripts/start.php",
-    "start:example:blink": "@script examples/blink.php",
+    "start:example:blink": "@script example/blink.php",
     "dev:example:blink": "@start dev 100 && @composer run dev"
   },
   "authors": [
