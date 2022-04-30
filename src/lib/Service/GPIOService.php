@@ -10,18 +10,6 @@ use function Amp\File\openFile;
 
 #[Service]
 class GPIOService {
-	public const READ        = 0;
-	public const WRITE       = 1;
-	public const HEADER7     = 4;
-	public const HEADER11    = 17;
-	public const HEADER12    = 18;
-	public const HEADER13rv1 = 21;
-	public const HEADER13    = 27;
-	public const HEADER15    = 22;
-	public const HEADER16    = 23;
-	public const HEADER18    = 25;
-	public const HEADER22    = 25;
-
 	public function __construct() { }
 
 	/**Builds a function that will interact with a pin.
@@ -33,8 +21,8 @@ class GPIOService {
 	 * If the direction is <b>GPIOService::READ</b>, the closure will take no parameters and return a truthy value.<br/>
 	 * If the direction is <b>GPIOService::WRITE</b>, the closure will take 1 boolean parameter (the value to write), and return void.
 	 */
-	public function export(int $pin, int $direction) {
-		return new LazyPromise(function() use($pin,$direction) {
+	public function export(int $pin, int $direction): Promise {
+		return new LazyPromise(function() use ($pin, $direction) {
 
 			# Exports pin to userspace and sets pin as an output
 			@shell_exec('echo "'.$pin.'" > /sys/class/gpio/export');

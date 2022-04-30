@@ -28,7 +28,10 @@
   "autoload": {
     "psr-4": {
       "CatPaw\\RaspberryPI\\": "src/lib/"
-    }
+    },
+    "files": [
+      "src/lib/constants.php"
+    ]
   },
   "require": {
     "php": "^8.0",

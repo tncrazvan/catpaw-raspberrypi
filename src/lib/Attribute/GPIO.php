@@ -2,17 +2,13 @@
 
 namespace CatPaw\RaspberryPI\Attribute;
 
-use Amp\File\File;
 use Amp\LazyPromise;
 use Amp\Promise;
 use CatPaw\Attribute\Entry;
 use CatPaw\Attribute\Interface\AttributeInterface;
 use CatPaw\Attribute\Trait\CoreAttributeDefinition;
 use CatPaw\RaspberryPI\Service\GPIOService;
-use Psr\Log\LoggerInterface;
 use ReflectionParameter;
-
-use function Amp\File\openFile;
 
 #[\Attribute]
 class GPIO implements AttributeInterface {
