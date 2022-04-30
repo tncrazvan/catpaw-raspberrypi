@@ -17,7 +17,7 @@ class GPIOService {
 	private const HEADER11    = 17;
 	private const HEADER12    = 18;
 	private const HEADER13rv1 = 21;
-	private const HEADER13    = 27;
+	private const HEADER13rv2 = 27;
 	private const HEADER15    = 22;
 	private const HEADER16    = 23;
 	private const HEADER18    = 25;
@@ -38,20 +38,20 @@ class GPIOService {
 		return new LazyPromise(function() use ($pin, $direction) {
 			$originalPin = $pin;
 			$pin = match ($pin) {
-				'7'     => self::HEADER7,
-				'11'    => self::HEADER11,
-				'12'    => self::HEADER12,
-				'13'    => self::HEADER13,
-				'13rv1' => self::HEADER13rv1,
-				'15'    => self::HEADER15,
-				'16'    => self::HEADER16,
-				'18'    => self::HEADER18,
-				'22'    => self::HEADER22,
-				default => -1,
+				'7'           => self::HEADER7,
+				'11'          => self::HEADER11,
+				'12'          => self::HEADER12,
+				'13rv1'       => self::HEADER13rv1,
+				'13rv2', '13' => self::HEADER13rv2,
+				'15'          => self::HEADER15,
+				'16'          => self::HEADER16,
+				'18'          => self::HEADER18,
+				'22'          => self::HEADER22,
+				default       => -1,
 			};
 
 			if(-1 === $pin)
-				throw new GPIOException("Pin name must be one of the following: '7','11','12','13','13rv1','15','16','18','22'. Received '$originalPin'.");
+				throw new GPIOException("Pin name must be one of the following: `7`,`11`,`12`,`13rv1`,`13`,`13rv2`,`15`,`16`,`18`,`22`. Received '$originalPin'.");
 
 			$originalDirection = $direction;
 
