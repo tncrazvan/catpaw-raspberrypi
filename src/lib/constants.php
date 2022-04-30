@@ -1,6 +1,6 @@
 <?php
 
-namespace CatPaw\RaspberryPI\Trait;
+namespace CatPaw\RaspberryPI;
 
 define('GPIO_READ', 0);
 define('GPIO_WRITE', 1);
