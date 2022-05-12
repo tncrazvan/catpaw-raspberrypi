@@ -1,6 +1,6 @@
 <?php
 
-namespace CatPaw\RaspberryPI\Exception;
+namespace CatPaw\RaspberryPI\Exceptions;
 
 use Exception;
 use JetBrains\PhpStorm\Pure;
@@ -18,9 +18,5 @@ class GPIOException extends Exception {
 	// custom string representation of object
 	public function __toString() {
 		return __CLASS__.": [{$this->code}]: {$this->message}\n";
-	}
-
-	public function customFunction() {
-		echo "A custom function for this type of exception\n";
 	}
 }

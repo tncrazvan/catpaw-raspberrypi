@@ -1,12 +1,12 @@
 <?php
 
-namespace CatPaw\RaspberryPI\Service;
+namespace CatPaw\RaspberryPI\Services;
 
 use Amp\File\File;
 use Amp\LazyPromise;
 use Amp\Promise;
 use CatPaw\Attribute\Service;
-use CatPaw\RaspberryPI\Exception\GPIOException;
+use CatPaw\RaspberryPI\Exceptions\GPIOException;
 use function Amp\File\openFile;
 
 #[Service]

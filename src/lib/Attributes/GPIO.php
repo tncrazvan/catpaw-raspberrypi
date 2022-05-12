@@ -1,6 +1,6 @@
 <?php
 
-namespace CatPaw\RaspberryPI\Attribute;
+namespace CatPaw\RaspberryPI\Attributes;
 
 use Amp\LazyPromise;
 use Amp\Promise;
@@ -8,7 +8,7 @@ use Attribute;
 use CatPaw\Attribute\Entry;
 use CatPaw\Attribute\Interface\AttributeInterface;
 use CatPaw\Attribute\Trait\CoreAttributeDefinition;
-use CatPaw\RaspberryPI\Service\GPIOService;
+use CatPaw\RaspberryPI\Services\GPIOService;
 use ReflectionParameter;
 
 #[Attribute]

@@ -1,7 +1,7 @@
 <?php
 
 namespace {
-    use CatPaw\RaspberryPI\Attribute\GPIO;
+    use CatPaw\RaspberryPI\Attributes\GPIO;
     use function Amp\delay;
 
     function main(
