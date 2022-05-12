@@ -5,7 +5,7 @@ namespace CatPaw\RaspberryPI\Services;
 use Amp\File\File;
 use Amp\LazyPromise;
 use Amp\Promise;
-use CatPaw\Attribute\Service;
+use CatPaw\Attributes\Service;
 use CatPaw\RaspberryPI\Exceptions\GPIOException;
 use function Amp\File\openFile;
 

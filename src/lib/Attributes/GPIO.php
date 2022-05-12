@@ -5,9 +5,9 @@ namespace CatPaw\RaspberryPI\Attributes;
 use Amp\LazyPromise;
 use Amp\Promise;
 use Attribute;
-use CatPaw\Attribute\Entry;
-use CatPaw\Attribute\Interface\AttributeInterface;
-use CatPaw\Attribute\Trait\CoreAttributeDefinition;
+use CatPaw\Attributes\Entry;
+use CatPaw\Attributes\Interfaces\AttributeInterface;
+use CatPaw\Attributes\Traits\CoreAttributeDefinition;
 use CatPaw\RaspberryPI\Services\GPIOService;
 use ReflectionParameter;
 
