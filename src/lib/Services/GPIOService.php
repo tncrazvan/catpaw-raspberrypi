@@ -40,15 +40,15 @@ class GPIOService {
             $originalPin = $pin;
             $pin = match ($pin) {
                 '7' => self::HEADER7,
-				'11' => self::HEADER11,
-				'12' => self::HEADER12,
-				'13rv1' => self::HEADER13rv1,
-				'13rv2', '13' => self::HEADER13rv2,
-				'15' => self::HEADER15,
-				'16' => self::HEADER16,
-				'18' => self::HEADER18,
-				'22' => self::HEADER22,
-				default => -1,
+                '11' => self::HEADER11,
+                '12' => self::HEADER12,
+                '13rv1' => self::HEADER13rv1,
+                '13rv2', '13' => self::HEADER13rv2,
+                '15' => self::HEADER15,
+                '16' => self::HEADER16,
+                '18' => self::HEADER18,
+                '22' => self::HEADER22,
+                default => -1,
             };
 
             if (-1 === $pin) {
@@ -59,8 +59,8 @@ class GPIOService {
 
             $direction = match ($direction) {
                 "read" => self::READ,
-				"write" => self::WRITE,
-				default => -1
+                "write" => self::WRITE,
+                default => -1
             };
 
             if (-1 === $pin) {

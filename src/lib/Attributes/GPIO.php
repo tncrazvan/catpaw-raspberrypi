@@ -32,19 +32,19 @@ class GPIO implements AttributeInterface {
      *                          </ul>
      */
     public function __construct(
-		private string $pin,
-		private string $direction,
-	) {
+        private string $pin,
+        private string $direction,
+    ) {
     }
 
     private GPIOService $service;
 
     #[Entry]
-	private function main(
-		GPIOService $service,
-	) {
-	    $this->service = $service;
-	}
+    private function main(
+        GPIOService $service,
+    ) {
+        $this->service = $service;
+    }
 
 
     /**
