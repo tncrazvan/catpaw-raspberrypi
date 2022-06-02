@@ -11,17 +11,17 @@ use CatPaw\RaspberryPI\Exceptions\GPIOException;
 
 #[Service]
 class GPIOService {
-    private const READ = 0;
-    private const WRITE = 1;
-    private const HEADER7 = 4;
-    private const HEADER11 = 17;
-    private const HEADER12 = 18;
+    private const READ        = 0;
+    private const WRITE       = 1;
+    private const HEADER7     = 4;
+    private const HEADER11    = 17;
+    private const HEADER12    = 18;
     private const HEADER13rv1 = 21;
     private const HEADER13rv2 = 27;
-    private const HEADER15 = 22;
-    private const HEADER16 = 23;
-    private const HEADER18 = 25;
-    private const HEADER22 = 25;
+    private const HEADER15    = 22;
+    private const HEADER16    = 23;
+    private const HEADER18    = 25;
+    private const HEADER22    = 25;
 
     public function __construct() {
     }
@@ -38,16 +38,16 @@ class GPIOService {
     public function export(string $pin, string $direction): Promise {
         return new LazyPromise(function() use ($pin, $direction) {
             $originalPin = $pin;
-            $pin = match ($pin) {
-                '7' => self::HEADER7,
-                '11' => self::HEADER11,
-                '12' => self::HEADER12,
+            $pin         = match ($pin) {
+                '7'     => self::HEADER7,
+                '11'    => self::HEADER11,
+                '12'    => self::HEADER12,
                 '13rv1' => self::HEADER13rv1,
                 '13rv2', '13' => self::HEADER13rv2,
-                '15' => self::HEADER15,
-                '16' => self::HEADER16,
-                '18' => self::HEADER18,
-                '22' => self::HEADER22,
+                '15'    => self::HEADER15,
+                '16'    => self::HEADER16,
+                '18'    => self::HEADER18,
+                '22'    => self::HEADER22,
                 default => -1,
             };
 
@@ -58,7 +58,7 @@ class GPIOService {
             $originalDirection = $direction;
 
             $direction = match ($direction) {
-                "read" => self::READ,
+                "read"  => self::READ,
                 "write" => self::WRITE,
                 default => -1
             };
