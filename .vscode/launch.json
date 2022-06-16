@@ -8,7 +8,7 @@
             "name": "start",
             "type": "php",
             "request": "launch",
-            "program": "${workspaceFolder}/vendor/catpaw/core/scripts/start.php",
+            "program": "${workspaceFolder}/bin/start",
             "cwd": "${workspaceFolder}",
             "port": 0,
             "args": [
