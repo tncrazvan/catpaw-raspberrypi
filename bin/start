@@ -32,8 +32,11 @@ require 'vendor/autoload.php';
 
 $file       = realpath($fileLong       ?? $fileShort);
 $name       = $nameShort               ?? $nameLong               ?? "App";
-$singletons = realpath($singletonsLong ?? $singletonsShort);
+$singletons = $singletonsLong ?? $singletonsShort;
 $verbose    = $verboseLong             ?? $verboseShort;
+
+if($singletons)
+    $singletons = realpath($singletons);
 
 if (!$verbose && null !== $verbose) {
     $verbose = true;
